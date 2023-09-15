@@ -153,7 +153,7 @@ class TPE:
         pso_c2 : float, optional
             c2 value for the pso algorithm. The default is 2.0.
         types : numpy array or types like int or float, optional
-            Types of each parameter or for all the parameters if types is only one it will be faster. The default is None.
+            Types of each parameter or for all the parameters. The default is None.
             Examples:
                 bounds = np.array([(-50, 50, 1), (-50, 50, 1)])
                 types = np.array([int, int])
