@@ -2,7 +2,7 @@
 import numpy as np
 
 
-class TPE:
+class Optimizer:
     def __init__(self, direction):
         self.__direction = 1 if direction.lower() == 'maximize' else -1 if direction.lower() == 'minimize' else 0
         if self.__direction == 0:
@@ -278,11 +278,11 @@ if __name__ == '__main__':
     #bounds = {'x': (-50, 50, 1), 'y': (-50, 50, 1)}
     bounds = np.array([(-50, 50, 1), (-50, 50, 1)])
     types = np.array([int, int])
-    tpe_object = TPE('maximize')
+    optimizer = Optimizer('maximize')
     
-    tpe_object.optimize(func, bounds, 100, True, types = types)
+    optimizer.optimize(func, bounds, 100, True, types = types)
     
-    print(tpe_object.best_trial)
+    print(optimizer.best_trial)
 
     import optuna
 
